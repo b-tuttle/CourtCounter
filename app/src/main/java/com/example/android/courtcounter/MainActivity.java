@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     /**
      * Displays the given score for Team A.
      */
@@ -23,17 +24,17 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(scoreTeamA));
     }
 
-    public void threePointerA (View v) {
+    public void threePointerA(View v) {
         scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
 
-    public void twoPointerA (View v) {
+    public void twoPointerA(View v) {
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
 
-    public void freeThrowA (View v) {
+    public void freeThrowA(View v) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
@@ -46,18 +47,26 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(scoreTeamB));
     }
 
-    public void threePointerB (View v) {
+    public void threePointerB(View v) {
         scoreTeamB += 3;
         displayForTeamB(scoreTeamB);
     }
 
-    public void twoPointerB (View v) {
+    public void twoPointerB(View v) {
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
 
-    public void freeThrowB (View v) {
+    public void freeThrowB(View v) {
         scoreTeamB += 1;
+        displayForTeamB(scoreTeamB);
+    }
+
+    // Resets scores for both teams to 0
+    public void resetScores(View v) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
     }
 }
