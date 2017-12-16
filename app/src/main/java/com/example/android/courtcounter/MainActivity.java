@@ -24,17 +24,22 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(scoreTeamA));
     }
 
-    public void threePointerA(View v) {
+    public void touchDownA(View v) {
+        scoreTeamA += 6;
+        displayForTeamA(scoreTeamA);
+    }
+
+    public void fieldGoalA(View v) {
         scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
 
-    public void twoPointerA(View v) {
+    public void twoPointsA(View v) {
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
 
-    public void freeThrowA(View v) {
+    public void extraPointA(View v) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
@@ -47,17 +52,22 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(scoreTeamB));
     }
 
-    public void threePointerB(View v) {
+    public void touchDownB(View v) {
+        scoreTeamB += 6;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void fieldGoalB(View v) {
         scoreTeamB += 3;
         displayForTeamB(scoreTeamB);
     }
 
-    public void twoPointerB(View v) {
+    public void twoPointsB(View v) {
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
 
-    public void freeThrowB(View v) {
+    public void extraPointB(View v) {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
